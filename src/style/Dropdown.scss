@@ -1,0 +1,212 @@
+/* =====================
+   Dropdown général
+===================== */
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  max-width: 1024px;
+  width: 100%;
+  margin: 40px auto;
+  box-sizing: relative;
+}
+
+.dropdown-header {
+  background-color: #ff6060;
+  color: white;
+  padding: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2; /* le header reste au-dessus */
+}
+
+.dropdown-header span {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.dropdown-header .arrow {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.dropdown-header .arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  background-color: #f6f6f6;
+  color: #FF6060;
+  padding: 16px;
+  font-size: 24px;
+  border-radius: 10px;
+  position: relative;
+  top: -5px;      /* fait remonter un peu le panneau */
+  z-index: 1;     /* passe derrière le header */
+}
+
+.dropdown-content ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.dropdown-content li {
+  margin-bottom: 8px;
+}
+
+.dropdown-content p {
+  margin: 0;
+}
+
+/* =====================
+   Dropdown spécifique PropertyDetails
+===================== */
+.dropdown-property {
+  flex: 1 1 0;
+  box-sizing: border-box;
+}
+
+.dropdown-property .dropdown-content {
+  font-size: 16px;
+  line-height: 24px; /* 1.5 → 24px */
+}
+
+.dropdown-property .dropdown-header span {
+  font-size: 18px;
+}
+
+/* =====================
+   Responsive Mobile
+===================== */
+@media (max-width: 767px) {
+  .dropdown {
+    margin: 5px auto; /* moins d’espace sur mobile */
+    width: 100%;
+  }
+
+  .dropdown-header {
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .dropdown-header .arrow {
+    width: 18.42px;
+    height: 18.42px;
+  }
+
+  .dropdown-header span {
+    font-size: 16px;
+  }
+
+  .dropdown-content {
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .dropdown-content li {
+    margin-bottom: 6px;
+  }
+
+  .dropdown-property .dropdown-header span {
+    font-size: 13px;
+  }
+
+  .dropdown-property .dropdown-content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* =====================
+   Responsive Tablette
+===================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dropdown {
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 100px; /* padding latéral pour tablette */
+  }
+
+  .dropdown-header {
+    padding: 10px;
+
+  }
+
+  .dropdown-header .arrow {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dropdown-header span {
+    font-size: 18px;
+  }
+
+  .dropdown-content {
+    font-size: 16px;
+    padding: 14px;
+  }
+  .dropdown-property {
+    padding: 0; /* enlever le padding pour tablette */
+  }
+
+  .dropdown-property .dropdown-header span {
+    font-size: 16px;
+  }
+
+  .dropdown-property .dropdown-content {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+  .dropdown-header {
+    padding: 10px 20px;
+    border-radius: 8px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .dropdown {
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 100px; /* padding latéral pour tablette */
+  }
+
+  .dropdown-header {
+    padding: 10px;
+  }
+
+  .dropdown-header .arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  .dropdown-header span {
+    font-size: 24px;
+  }
+
+  .dropdown-content {
+    font-size: 21px;
+    padding: 14px;
+  }
+  .dropdown-property {
+    padding: 0; /* enlever le padding pour tablette */
+  }
+
+  .dropdown-property .dropdown-header span {
+    font-size: 16px;
+  }
+
+  .dropdown-property .dropdown-content {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

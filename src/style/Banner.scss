@@ -1,0 +1,119 @@
+.banner {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+/* Overlay */
+.banner-overlay {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  height: 220px;
+}
+
+/* Image */
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+  display: block;
+  border-radius: 10px;
+}
+
+/* Texte */
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px; /* Desktop */
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+/* Mobile break */
+.mobile-break {
+  display: inline;
+}
+
+/* =======================
+   Responsive
+======================= */
+
+/* Desktop standard (écrans entre 1025px et 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .banner-overlay {
+    height: 100%;       /* un peu moins haute que desktop (223px) */
+    border-radius: 24px; /* arrondi intermédiaire */
+  }
+
+  .banner-text {
+    font-size: 36px;     /* déjà présent dans ton code */
+    padding: 0 32px;     /* un peu plus de marge latérale */
+    white-space: normal; /* permet de couper si besoin */
+  }
+
+  .mobile-break {
+    display: inline;     /* pas encore en bloc comme sur mobile */
+  }
+}
+
+
+/* Tablette */
+
+@media (max-width: 1024px) {
+  .banner-overlay {
+    height: 180px;       /* un peu moins haute que desktop (223px) */
+    border-radius: 15px; /* arrondi intermédiaire */
+  }
+
+  .banner-text {
+    font-size: 36px;     /* déjà présent dans ton code */
+    padding: 0 32px;     /* un peu plus de marge latérale */
+    white-space: normal; /* permet de couper si besoin */
+  }
+
+  .mobile-break {
+    display: inline;     /* pas encore en bloc comme sur mobile */
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+  .banner-overlay {
+    height: 111px; /* moitié moins haut */
+    border-radius: 10px;
+  }
+
+  .banner-text {
+    font-size: 24px;
+    text-align: left;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    white-space: normal; /* autorise retour à la ligne */
+  }
+
+  .mobile-break {
+    display: block; /* texte passe à la ligne */
+  }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+  .banner-overlay {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .banner-text {
+    font-size: 28px;
+  }  
+}

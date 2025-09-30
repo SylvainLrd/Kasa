@@ -1,0 +1,89 @@
+/* =======================
+   Page Erreur
+======================= */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .error-code {
+    font-size: 200px;
+    font-weight: 700;
+    color: #FF6060;
+    padding: 100px 0;
+  }
+
+  .error-message {
+    font-size: 36px;
+    margin: 20px 0;
+    font-weight: 400;
+    color: #FF6060;
+  }
+
+  .back-home {
+    font-size: 18px;
+    padding: 100px;
+    color: #FF6060;
+    text-decoration: underline;
+  }
+
+  .mobile-break {
+    display: inline;
+  }
+}
+
+/* -------- Responsive Tablette -------- */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .error-page {
+    padding: 80px 20px;
+
+    .error-code {
+      font-size: 180px; /* taille intermédiaire */
+    }
+
+    .error-message {
+      font-size: 28px;
+      margin: 15px 0 80px;
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+
+    .back-home {
+      font-size: 16px;
+      padding: 0.5rem 0;
+    }
+
+    .mobile-break {
+      display: block; /* passe à la ligne sur tablette si nécessaire */
+    }
+  }
+}
+
+/* -------- Responsive Mobile -------- */
+@media (max-width: 767px) {
+  .error-page {
+    padding: 100px 20px;
+
+    .error-code {
+      font-size: 96px;
+    }
+
+    .error-message {
+      font-size: 18px;
+      margin: 10px 0 100px;
+      line-height: 1.4;
+      padding: 0 10px;
+    }
+
+    .back-home {
+      font-size: 14px;
+      padding: 0;
+    }
+
+    .mobile-break {
+      display: block;
+    }
+  }
+}

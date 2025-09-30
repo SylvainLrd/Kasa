@@ -1,0 +1,126 @@
+.header {
+  background-color: white; // optionnel
+  padding: 32px 0;
+
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1230px;
+    margin: 0 auto;
+  }
+
+  &-logo {
+    height: 60px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    color: #FF6060;
+    font-size: 24px;
+    font-weight: 500;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .header {
+    padding: 40px 0;
+
+    &-content {
+      max-width: 1272px;
+      padding: 0 32px;
+    }
+
+    &-logo {
+      height: 60px; /* même taille que desktop */
+    }
+  }
+
+  .nav-list {
+    gap: 2rem;
+
+    a {
+      font-size: 24px; /* même taille que desktop */
+      font-weight: 500;
+      text-transform: none; /* Pas besoin des majuscules ici */
+    }
+  }
+}
+
+/* Tablette et petits écrans */
+@media (min-width: 1025px) and (max-width: 1240px) {
+   .header {
+    padding: 30px 0px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 30px 0;
+
+    &-content {
+      max-width: 100%; 
+      padding: 0 20px; 
+    }
+
+    &-logo {
+      height: 52px; /* Taille intermédiaire entre desktop (60px) et mobile (47px) */
+    }
+  }
+
+  .nav-list {
+    gap: 1.5rem; /* Espacement un peu réduit */
+    
+    a {
+      font-size: 18px; /* Moins gros que desktop (24px), plus lisible que mobile (13px) */
+      font-weight: 500;
+      text-transform: none; /* Pas besoin des majuscules ici */
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .header {
+    padding: 20px 0; 
+
+    &-content {
+      max-width: 100%;
+      /* Garder le flex pour logo + nav */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-logo {
+      height: 47px; /* Logo réduit */
+    }
+  }
+
+  .nav-list {
+    flex-direction: row; /* liens côte à côte */
+    gap: 1rem;
+    align-items: center;
+
+    a {
+      font-size: 13px;           /* Texte plus petit */
+      text-transform: uppercase; /* Majuscules */
+      font-weight: 400;
+      white-space: nowrap;       /* Evite le retour à la ligne */
+    }
+  }
+}

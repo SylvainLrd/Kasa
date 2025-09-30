@@ -1,0 +1,205 @@
+/* =======================
+   Banner
+======================= */
+.banner {
+  margin: 32px auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  max-width: 1240px;
+  text-align: center;
+  padding: 0;
+}
+
+/* =======================
+   Cards / Properties
+======================= */
+.cards-wrapper {
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  max-width: 1220px;
+  margin: 64px auto;
+  padding: 32px;
+}
+
+.properties-list,
+.cards-container {
+  display: grid;
+  width: 100%;
+  margin: 0 auto;
+  column-gap: 32px; /* espace horizontal par défaut */
+  row-gap: 40px;    /* espace vertical par défaut */
+}
+
+/* Desktop default: 3-4 colonnes fluides */
+.properties-list {
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* plus large pour remplir la page */
+}
+
+.cards-container {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px;
+}
+
+/* =======================
+   Property Card
+======================= */
+.property-card {
+  position: relative;
+  height: 320px; /* légèrement plus haut pour remplir mieux */
+  border-radius: 10px; 
+  overflow: hidden; 
+  text-decoration: none;  
+  color: white;
+  transition: transform 0.2s; 
+}
+
+.property-card:hover {
+  transform: scale(1.02); 
+}
+
+.property-card img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+  display: block;
+  border-radius: 10px;
+}
+
+.property-card-title {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+
+/* =======================
+   Responsive
+======================= */
+/* Desktop */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .banner {
+    font-size: 32px;
+    margin: 32px auto;
+    border-radius: 25px;
+    max-width: 1280px; 
+    padding: 0 32px; /* un peu de marge latérale */
+  }
+  .cards-wrapper {
+    padding: 32px;
+    margin: 48px auto;
+  }
+  .properties-list,
+  .cards-container {
+    column-gap: 32px; /* horizontal */
+    row-gap: 40px;    /* vertical */
+    padding: 0 16px;  /* un peu de marge latérale */
+  }
+  .property-card {
+    height: 320px; /* même taille que desktop */
+    width: auto;   /* prendre toute la largeur dispo */
+  }
+  .property-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;  /* centrer l'image */
+    display: block;
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1274px) {
+  .cards-wrapper {
+    padding: 32px;
+    margin: 48px 32px;
+  }
+  .banner {
+    max-width: 100%;
+  }
+}
+
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .banner {
+    font-size: 26px;
+    margin: 24px auto;
+    border-radius: 12px;
+    padding: 0 16px; /* un peu de marge latérale */
+  }
+
+  .cards-wrapper {
+    padding: 24px;
+    margin: 32px 20px;
+
+  }
+
+  .properties-list,
+  .cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 30px; /* horizontal */
+    row-gap: 30px;    /* vertical */
+    padding: 0;       /* enlever le padding pour tablette */
+  }
+
+  .property-card {
+    height: 300px; /* intermédiaire pour tablette */
+    width: auto;    /* prendre toute la largeur dispo */
+  }
+  .property-card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-position: center;  /* centrer l'image */
+    display: block;
+  } 
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .banner {
+    font-size: 22px;
+    margin: 16px auto;
+    border-radius: 10px;
+    padding: 0 16px; /* un peu de marge latérale */
+  }
+
+  .cards-wrapper {
+    margin: 0;
+    background-color: transparent;
+    padding: 16px;
+  }
+
+  .properties-list,
+  .cards-container {
+    grid-template-columns: 1fr;
+    padding: 0;
+    row-gap: 24px; /* vertical uniquement */
+  }
+
+  .property-card {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .property-card img {
+    width: 100%;
+    height: 255px;
+    object-fit: cover;
+  }
+}

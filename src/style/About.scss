@@ -1,0 +1,138 @@
+.about-banner .banner-overlay {
+    height: 300px;      /* un peu moins haute que desktop (223px) */
+    border-radius: 24px; /* arrondi intermédiaire */
+    width: 100%;
+  }
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .about-banner .banner-overlay {
+    height: 300px;      /* un peu moins haute que desktop (223px) */
+    border-radius: 24px; /* arrondi intermédiaire */
+    width: 100%;
+  }
+
+  .about-banner .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .about-banner .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    font-size: 44px;    /* déjà présent dans ton code */
+    font-weight: bold;
+    color: white;
+    width: 90%;
+    line-height: 1.4;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .about-banner .banner-overlay {
+    height: 200px;
+    width: 100%;
+  }
+
+  .about-banner .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .about-banner .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 32px; /* taille intermédiaire */
+    font-weight: bold;
+    color: white;
+    width: 90%;
+    line-height: 1.4;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .about-banner .banner-overlay {
+    height: 223px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .about-banner .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .about-banner .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 90%;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdowns-about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdowns-about .dropdown  {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px; /* padding latéral pour mobile */
+
+    .dropdown-header {
+      height: 30px;
+      background-color: #FF6060;
+      color: white;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .dropdown-header span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .dropdown-header .arrow {
+      width: 15px;
+      height: 17px;
+    }
+
+    .dropdown-content {
+      background-color: #f6f6f6;
+      font-size: 12px;
+      padding: 10px;
+      border-radius: 5px;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+  .dropdowns-about .dropdown {
+    width: 80%;
+  }
+}
+
